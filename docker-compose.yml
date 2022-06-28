@@ -1,0 +1,17 @@
+version: '3'
+services:
+  nginx_webservices:
+    build: /root/sample_project
+    image: "nginx_sample"
+    container_name: nginx_sample
+    ports:
+    - 80:80
+  mysql_dbservices:
+    image: mysql:5.7
+    container_name: mysql_db
+    restart: always
+    ports:
+    - 3306:3306
+    environment:
+      MYSQL_DATABASE: test
+      MYSQL_ROOT_PASSWORD: root
