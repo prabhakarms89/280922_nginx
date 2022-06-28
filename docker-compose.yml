@@ -1,7 +1,7 @@
 version: '3'
 services:
   nginx_webservices:
-    build: /var/lib/jenkins/workspace/nginx_new
+    build: .
     image: "nginx_sample"
     container_name: nginx_sample
     ports:
